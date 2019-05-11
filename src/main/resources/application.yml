@@ -1,0 +1,41 @@
+#server:
+#  #\u670D\u52A1\u7AEF\u53E3
+#  port: 9001
+spring:
+  #\u6570\u636E\u6E90\u914D\u7F6E
+  datasource:
+    url: jdbc:mysql://192.168.56.101:3306/sell?serverTimezone=UTC&characterEncoding=utf-8
+    username: root
+    password: 123456
+  #JPA\u7684\u6574\u5408\u914D\u7F6E
+  jpa:
+#    database: mysql
+    show-sql: true
+  jackson:
+    default-property-inclusion: non_null
+  redis:
+    host: 192.168.56.101
+    port: 6379
+server:
+  servlet:
+    context-path: /sell
+wechat:
+  mpAppId: wx95e6aafddbdff3ee
+  mpAppSecret: 8e6ed603ec57aaee7bb7d2d690f03dcc
+  openAppId: wxe7dc2a32e9e678af
+  openAppSecret: cb161792d27549b20f11bddaa20c54c0
+  mchId: 234242423
+  mchKey: gesa32324
+  keyPath: geage33355
+  templateId:
+    orderStatus: 8aR3DLQjHTrvb5BQKPnUDJAkwso7J17FCpk
+#  微信异步通知地址
+  notifyUrl: http://selllzq.natapp1.cc/sell/pay/notify
+urlconfig:
+  wechatMpAuthorize: http://selllzq.natapp1.cc
+  wechatOpenAuthorize: http://selllzq.natapp1.cc
+  sell: http://selllzq.natapp1.cc
+logging:
+  pattern:
+    console: "%d - %msg%n"
+  file: /Users/liuzhaoqi/Documents/log/sell.log
