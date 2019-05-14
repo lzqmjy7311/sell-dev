@@ -28,5 +28,4 @@ public class SellerInfo {
 
     @Column(name = "openid")
     private String openId;
-
 }
